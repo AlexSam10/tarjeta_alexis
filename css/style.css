@@ -1,0 +1,79 @@
+/*
+font-family: 'Lobster', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Pangolin', cursive;
+*/
+
+#tipo1{font-family: 'Lobster', cursive; font-size: 2em;}
+#tipo2{font-family: 'Oswald', sans-serif; font-size: 2em;}
+#tipo3{font-family: 'Pangolin', cursive; font-size: 2em;}
+
+#tarjeta{
+	width: 23%;
+	height: auto;
+	min-height:  370px ;
+	display: none;
+	margin: 80px auto;
+	background: #fff;
+	border: 10px solid #ddd;
+	padding: 20px 5%;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}
+#click{
+display:block;
+margin:auto;
+}
+/*Selector universal*/
+*{margin:0; padding: 0}
+body{
+	font: 12px Monaco, Monospace;
+	background-color: #ffcc99;
+}
+#contenido{
+	width: 60%;
+	margin: 80px auto;
+	display: block;
+	background: #fff;
+	border: 10px solid #ddd;
+	padding: 20px 5%;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}
+#titulito{
+	text-align: center;
+}
+h1{
+	font-size: 25px:
+	padding:0 0 10px;
+	color: #ff884d;
+	border-bottom: 1px solid #ddd;
+}
+h2{
+	font-size: 20px;
+	padding: 10px 0;
+	color: #33ff77;
+}
+
+#titulo{
+	text-align: center;
+}
+#descripcion{
+	text-align: justify;
+	padding: 30px auto;
+}
+#section2{
+	text-align: center;
+}
+#subtitulo{
+	text-align: center;
+	font-size: 18px;
+}
+#nombrePer{
+	text-align: right;
+}
+#nombreIn{
+	text-align: left;
+}

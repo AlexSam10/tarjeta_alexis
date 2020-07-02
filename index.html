@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<title>Tarjeta Dinámica con JS</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&family=Pangolin&display=swap" rel="stylesheet">
+
+	<script >
+		function cambiarTamanoEjemplo(){
+			var tam=document.getElementById("tamanoTxt").value;
+			document.getElementById("ejemploTexto").style.fontSize=tam+"em";
+		}
+		function generarTarjeta(){
+		    document.getElementById("tarjeta").style.display='block';
+		    //revisamos el radio de imagen que fue elegido
+		    var fondo;
+		    if(document.getElementById("tipoImg1").checked){
+			    fondo=document.getElementById("tipoImg1").value;
+		    }
+		    else if (document.getElementById("tipoImg2").checked){
+			    fondo=document.getElementById("tipoImg2").value;
+		    }
+		    else fondo=document.getElementById("tipoImg3").value;
+		
+		    //agregamos el fondo a la tarjeta
+            document.getElementById("tarjeta").style.backgroundImage="url('"+fondo+"')";	
+            document.getElementById("tarjeta").style.backgroundRepeat="no-repeat";	
+		    //insertar textos
+		    var titu=document.getElementById("tituloTxt").value;
+		    document.getElementById("titulo").innerHTML=titu;
+
+		    //color de texto
+		    var c=document.getElementById("colorTxt").value;
+		    document.getElementById("titulo").style.color=c;
+
+		    //tamaño de texto
+		    var tam=document.getElementById("tamanoTxt").value;
+		    document.getElementById("titulo").style.fontSize=tam+"em";
+
+		    //validar cual es la tipografia seleccionada y recuperar el valor
+		
+		    //asignar la tipografia
+		    var tipog;
+		    if(document.getElementById("tipoTxt1").checked){
+			    tipog=document.getElementById("tipoTxt1").value;
+		    }
+		    else if (document.getElementById("tipoTxt2").checked){
+			    tipog=document.getElementById("tipoTxt2").value;
+		    }
+		    else tipog=document.getElementById("tipoTxt3").value;
+
+		    //asignar la tipografia
+		    document.getElementById("titulo").style.fontFamily=tipog;
+
+
+
+		    //insertar subtitulo
+		    var subti=document.getElementById("subtituloTxt").value;
+		    document.getElementById("subtitulo").innerHTML=subti;
+		    //color de texto
+		    var d=document.getElementById("colorTxt").value;
+		    document.getElementById("subtitulo").style.color=d;
+		    //validar cual es la tipografia seleccionada y recuperar el valor
+		
+		    //asignar la tipografia
+		    var tipog;
+		    if(document.getElementById("tipoTxt1").checked){
+			    tipog=document.getElementById("tipoTxt1").value;
+		    }
+		    else if (document.getElementById("tipoTxt2").checked){
+			    tipog=document.getElementById("tipoTxt2").value;
+		    }
+		    else tipog=document.getElementById("tipoTxt3").value;
+		    //asignar la tipografia
+		    document.getElementById("subtitulo").style.fontFamily=tipog;
+
+
+
+		    //insertar nombre de la persona a regalar
+		    var nomRe=document.getElementById("nombreTxt").value;
+		    document.getElementById("nombreIn").innerHTML=nomRe;
+		    var subti=document.getElementById("nombreTxt").value;
+		    document.getElementById("nombreIn").innerHTML="Para: "+subti;
+		    //color de texto
+		    var gh=document.getElementById("colorTxt").value;
+		    document.getElementById("nombreIn").style.color=gh;
+		    //validar cual es la tipografia seleccionada y recuperar el valor
+		
+		    //asignar la tipografia
+		    var tipog;
+		    if(document.getElementById("tipoTxt1").checked){
+			    tipog=document.getElementById("tipoTxt1").value;
+		    }
+		    else if (document.getElementById("tipoTxt2").checked){
+			    tipog=document.getElementById("tipoTxt2").value;
+		    }
+		    else tipog=document.getElementById("tipoTxt3").value;
+		    //asignar la tipografia
+		    document.getElementById("nombreIn").style.fontFamily=tipog;
+
+
+
+		    //insertar descripcion
+		    var descr=document.getElementById("descripcionTxt").value;
+		    document.getElementById("descripcion").innerHTML=descr;
+
+		    var subti=document.getElementById("descripcionTxt").value;
+		    document.getElementById("descripcion").innerHTML=subti;
+		    //color de texto
+		    var e=document.getElementById("colorTxt").value;
+		    document.getElementById("descripcion").style.color=e;
+		    //validar cual es la tipografia seleccionada y recuperar el valor
+		
+		    //asignar la tipografia
+		    var tipog;
+		    if(document.getElementById("tipoTxt1").checked){
+			    tipog=document.getElementById("tipoTxt1").value;
+		    }
+		    else if (document.getElementById("tipoTxt2").checked){
+			    tipog=document.getElementById("tipoTxt2").value;
+		    }
+		    else tipog=document.getElementById("tipoTxt3").value;
+		    //asignar la tipografia
+		    document.getElementById("descripcion").style.fontFamily=tipog;
+
+
+
+		    //insertar nombre de usuario
+		    var nombPer=document.getElementById("nombrepTxt").value;
+		    document.getElementById("nombrePer").innerHTML=nombPer;
+		    var subti=document.getElementById("nombrepTxt").value;
+		    document.getElementById("nombrePer").innerHTML="De: "+subti;
+		    //color de texto
+		    var d=document.getElementById("colorTxt").value;
+		    document.getElementById("nombrePer").style.color=d;
+		    //validar cual es la tipografia seleccionada y recuperar el valor
+		
+		    //asignar la tipografia
+		    var tipog;
+		    if(document.getElementById("tipoTxt1").checked){
+			    tipog=document.getElementById("tipoTxt1").value;
+		    }
+		    else if (document.getElementById("tipoTxt2").checked){
+			    tipog=document.getElementById("tipoTxt2").value;
+		    }
+		    else tipog=document.getElementById("tipoTxt3").value;
+		    //asignar la tipografia
+		    document.getElementById("nombrePer").style.fontFamily=tipog;
+		    //cambio de color de fondo
+		    var colorFon=document.getElementById("colorFon1").value;
+		    document.getElementById("bodys").style.backgroundColor=colorFon;
+            //desaparece el bloque de crear tarjeta, al momento de dar clic para ver la tarjeta creada.
+		    document.getElementById("contenido").style.display='none';
+		}
+	</script>
+</head>
+<body id="bodys">
+	<!--pedir informacion para la tarjeta de felicitacion-->
+	<article id="contenido">
+		<h1 id="titulito">!Crea tu Tarjeta de Felicitación!</h1>
+
+		<h2>Elige un tema:</h2>
+		<input type="radio" name="tipoTema" checked> San Valentin
+		<input type="radio" name="tipoTema"> Cumpleaños
+		<input type="radio" name="tipoTema"> Superación
+		<h2>Elige una imagen:</h2>
+		      <input type="radio" name="tipoImg" id="tipoImg1" checked value="images/sanvale2.jpg">
+		      <img src="images/sanvale2.jpg" height="150" width="150">
+		      <input type="radio" name="tipoImg" id="tipoImg2" value="images/cumple.jpg">
+		      <img src="images/cumple.jpg" height="150" width="150">
+		      <input type="radio" name="tipoImg" id="tipoImg3" value="images/pajaros.jpg">
+		      <img src="images/pajaros.jpg" height="150" width="150">
+	    <h2>Ingrese el nombre de la persona a felicitar:</h2>
+	          <input type="text" id="nombreTxt">
+	    <h2>Ingrese un titulo:</h2>
+	          <input type="text" id="tituloTxt">
+	    <h2>Ingrese un subtitulo:</h2>
+	          <input type="text" id="subtituloTxt">
+	    <h2>Ingrese una descripción:</h2>
+	          <textarea id="descripcionTxt" cols="30" rows="5"></textarea>
+	    <h2>Ingrese su nombre:</h2>
+	          <input type="text" id="nombrepTxt">
+	    <h2>Formato de texto:</h2>
+	          <label for="colorTxt">Color:</label>
+              <input type="color" id="colorTxt"><br>
+              <label for="">Tamaño de Titulo:</label>
+              <input type="range" id="tamanoTxt" min="1" max="5" onchange="cambiarTamanoEjemplo();">
+              <label id="ejemploTexto"> Ejemplo</label><br>
+
+              <label>Tipografía:</label><br>
+              <input type="radio" name="tipoTxt" id="tipoTxt1" checked value="Lobster">
+              <label id="tipo1"> Lobster</label>
+              <input type="radio" name="tipoTxt" id="tipoTxt2" value="Oswald">
+              <label id="tipo2"> Oswald</label>
+              <input type="radio" name="tipoTxt" id="tipoTxt3" value="Pangolin">
+              <label id="tipo3"> Pangolin</label>
+              <br>
+              <h2>Cambie el color de fondo:</h2>
+	          <label>Color: </label>
+	          <input type="color" id="colorFon1"><br>
+              <img id="click" src="images/oval.png" onclick="generarTarjeta();"><br>
+
+	    
+	</article>
+	<section id="section2">
+	<article id="tarjeta">
+		<p id="titulo"></p>
+		<p id="subtitulo"></p><br>
+		<p id="nombreIn"></p><br>
+		<p id="descripcion"></p><br>
+		<p id="nombrePer"></p>
+
+	</article>
+</section>
+</body>
+</html>
